@@ -3,8 +3,22 @@ marp: true
 theme: default
 paginate: true
 backgroundColor: #fff
-header: 'Présentation API'
-footer: 'Solicode - 2026'
+header: "Présentation API"
+footer: "Solicode - 2026"
+---
+
+# Travail à faire
+
+## Objectif : Comprendre et tester une API
+
+### 1. C'est quoi une API ?
+
+### 2. Exemple Hello World
+
+
+### 3. Exercice pratique
+
+
 ---
 
 # Qu'est-ce qu'une API ?
@@ -12,7 +26,7 @@ footer: 'Solicode - 2026'
 ## 1) Définition
 
 **API = Application Programming Interface**  
-*(Interface de Programmation d'Application)*
+_(Interface de Programmation d'Application)_
 
 En termes simples :  
 Une **API est un pont** qui permet à deux applications de communiquer entre elles.
@@ -40,8 +54,8 @@ Au lieu que tout soit connecté directement, l'API devient la **couche de commun
 La communication suit un processus simple en 4 étapes :
 
 1. **Requête (Request)** – Le client envoie une demande.
-**Exemple :**
-"Donne-moi la liste des utilisateurs"
+   **Exemple :**
+   "Donne-moi la liste des utilisateurs"
 
 2. **Réception** – L'API reçoit la requête et vérifie sa validité.
 
@@ -67,17 +81,21 @@ La plupart des API modernes utilisent les méthodes HTTP pour définir les actio
 ### Récupérer les produits
 
 **Requête**
+
 - Méthode : `GET`
 - URL : `/api/products`
 
 **Réponse (JSON)**
+
 ```json
 [
   { "id": 1, "nom": "Ordinateur Portable", "prix": 900 },
   { "id": 2, "nom": "Souris", "prix": 20 }
 ]
 ```
+
 ---
 
 ## 6) Methode Utiliser
+
 - Postman
