@@ -16,6 +16,13 @@ color: #5B2C6F
 **Date : 23/02/2026**
 
 ---
+# Travail a faire
+
+- partie 1 - app spatie (Hello World)
+- partie 2 - autorisation item
+
+
+---
 
 # Objectif du Lab
 
