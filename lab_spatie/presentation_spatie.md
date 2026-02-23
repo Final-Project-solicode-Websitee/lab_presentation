@@ -11,9 +11,9 @@ color: #5B2C6F
 # Présentation Lab Spatie
 ### Gestion des rôles & permissions
 
-**Présentée par : Mohamed Ouallou**  
+**Présentée par : Solidevs 26**  
 **Encadré par : M. Fouad Essarraj**  
-**Date : 19/02/2026**
+**Date : 23/02/2026**
 
 ---
 
@@ -35,7 +35,7 @@ color: #5B2C6F
 - Associer permissions <-> rôles
 - Vérifier les accès utilisateurs
 
-👉 Gestion dynamique des autorisations via base de données.
+👉 Gestion **dynamique** des autorisations via base de données.
 
 ---
 
@@ -51,6 +51,11 @@ color: #5B2C6F
 
 ---
 
+# Diagramme de class
+
+![alt text](images/diagramme-class.png)
+
+---
 # Relation entre les tables
 
 User  
@@ -145,7 +150,7 @@ class User extends Authenticatable
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 
-Permission::create(['name' => 'edit articles']);
+Permission::create(['name' => 'edit-articles']);
 Role::create(['name' => 'admin']);
 ```
 
@@ -155,7 +160,7 @@ Role::create(['name' => 'admin']);
 
 ```php
 $user->assignRole('admin');
-$user->givePermissionTo('edit articles');
+$user->givePermissionTo('edit-articles');
 ```
 ---
 
@@ -163,7 +168,7 @@ $user->givePermissionTo('edit articles');
 
 Dans un Controller : 
 ```php
-if ($user->can('edit articles')) {
+if ($user->can('edit-articles')) {
     // Autorisé
 }
 ```
@@ -174,7 +179,7 @@ if ($user->can('edit articles')) {
 ## Dans une Blade
 
 ```php
-@can('edit articles')
+@can('edit-articles')
     <a href="#">Edit</a>
 @endcan
 ```
@@ -193,7 +198,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 
 Dans Blade
 ```php
-@can('edit articles')
+@can('edit-articles')
     <button>Edit</button>
     
 @endcan
