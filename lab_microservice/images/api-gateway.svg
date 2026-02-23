@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400">
+  <style>
+    .box { fill:#fff7ed; stroke:#92400e; stroke-width:2; }
+    .title { font:16px sans-serif; fill:#92400e; font-weight:600 }
+    .small { font:13px sans-serif; fill:#332a0b }
+    .arrow { stroke:#92400e; stroke-width:2; fill:none; marker-end:url(#a); }
+  </style>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#92400e" />
+    </marker>
+  </defs>
+
+  <rect x="50" y="40" width="140" height="80" rx="8" class="box"/>
+  <text x="120" y="90" text-anchor="middle" class="title">Frontend</text>
+
+  <rect x="240" y="20" width="220" height="120" rx="10" class="box"/>
+  <text x="350" y="75" text-anchor="middle" class="title">API Gateway</text>
+  <text x="350" y="95" text-anchor="middle" class="small">Router • Auth • Rate limit</text>
+
+  <rect x="520" y="10" width="140" height="70" rx="6" class="box"/>
+  <text x="590" y="50" text-anchor="middle" class="small">Service A</text>
+
+  <rect x="520" y="110" width="140" height="70" rx="6" class="box"/>
+  <text x="590" y="150" text-anchor="middle" class="small">Service B</text>
+
+  <path d="M190 80 L240 80" class="arrow" />
+  <path d="M460 80 L520 45" class="arrow" />
+  <path d="M460 80 L520 145" class="arrow" />
+
+</svg>
