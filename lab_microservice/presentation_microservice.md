@@ -100,7 +100,7 @@ Et tout est dans le **même projet Laravel**,
 
 Microservice = Architecture basée sur des services indépendants.
 
-Un microservice est une **petite application autonome**  
+Un microservice est une **petite application  indépendante**  
 qui fait une seule chose, mais qui la fait bien.
 
 - Chaque service a sa propre logique  
@@ -130,9 +130,9 @@ on divise en plusieurs services indépendants.
 5. Il renvoie une réponse (souvent en JSON).  
 
 Communication possible via :
-- HTTP / REST  
-- Message Broker  
-- gRPC  
+- HTTP / REST  = Simple, lent, synchrone.
+- Message Broker  = Asynchrone, découplé, fiable pour du traitement différé.
+- gRPC = Très rapide, synchrone, optimisé pour hautes perfs. 
 ---
 
 ## 📌 Exemple (E-commerce)
@@ -155,10 +155,10 @@ Chaque service fonctionne seul mais communique avec les autres.
 
 ## ✅ Avantages des Microservices
 
-- Haute scalabilité  
-- Déploiement indépendant  
-- Flexibilité technologique  
-- Meilleure organisation des grands projets  
+- On peut gérer plus d'utilisateurs facilement  
+- On peut mettre à jour un service sans toucher aux autres  
+- Chaque service peut utiliser un langage différent  
+- Les équipes travaillent chacune sur leur propre service  
 
 ---
 
@@ -255,6 +255,20 @@ Dans une architecture microservices :
 
 # Conclusion
 
-Monolithique → Simple et adapté aux petits projets.  
-Microservices → Puissant et adapté aux grands systèmes évolutifs.  
-API Gateway → Le chef d'orchestre qui simplifie la communication.
+![w:500 center](./images/Monolithique%20vs%20Microservices.png)
+
+- **Monolithique** → Simple et adapté aux petits projets.  
+- **Microservices** → Puissant et adapté aux grands systèmes évolutifs.  
+- **API Gateway** → Le chef d'orchestre qui simplifie la communication.
+
+---
+
+# 📖 Mots Difficiles
+
+- **JSON Web Token (JWT)** : Un jeton sécurisé envoyé avec chaque requête pour prouver l'identité de l'utilisateur sans avoir à se reconnecter à chaque fois.
+- **HTTP / REST** : Une méthode de communication où un service envoie une requête et attend directement la réponse.
+- **Message Broker** : Un intermédiaire qui stocke les messages entre services pour qu'ils ne soient pas obligés de communiquer en même temps.
+- **gRPC** : Un protocole de communication très rapide entre services, idéal quand la performance est importante.
+- **DevOps** : Des outils et pratiques qui automatisent le déploiement, la surveillance et la gestion des applications (ex : Docker, Kubernetes).
+- **Rate Limiting** : Une technique qui limite le nombre de requêtes qu'un utilisateur peut envoyer en un temps donné pour éviter de surcharger les services.
+
